@@ -1,0 +1,1748 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#"
+     xml:base="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#annotatesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#annotatesTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasAPI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasAPI">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasClass">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasConstant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasConstant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasConstructor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasConstructor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constructor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasEdition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasEdition">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasException -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasException">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasGenericMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasGenericMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasInterface">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMember">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ClassMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasPackage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasPackage">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Property"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#implements">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToAPI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToAPI">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToAplicationServer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToAplicationServer">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToFeature">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToIssue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToIssue">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Issue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Issue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Solution"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSubFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSubFeature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSubTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToSubTopic">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToTopic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesToTopic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#relatesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#throwsException -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#throwsException">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#hasVersion">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Platform"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ClassMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ClassMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constructor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AnnotableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Issue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Lesson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Lesson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ClassMember"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Platform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Platform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ClassMember"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RelatedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Column -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Column">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@Column</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Consumes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Consumes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@Consumes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@FormParam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@FormParam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@FormParam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@GeneratedValue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@GeneratedValue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@GeneratedValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@LocalBean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@LocalBean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@LocalBean</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@QueryParam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@QueryParam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@QueryParam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Stateful -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Stateful">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@Stateful</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Stateless -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Stateless">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@Stateless</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Table -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Table">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@Table</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@TransactionAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@TransactionAttribute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">@TransactionAttribute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Apache_Tomcat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Apache_Tomcat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+        <rdfs:label rdf:datatype="&xsd;string">Apache Tomcat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Bean_Validation_constraint(s)_violated -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Bean_Validation_constraint(s)_violated">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Bean Validation constraint(s) violated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Business_Logic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Business_Logic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Bussines Logic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Combination_of_access_types -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Combination_of_access_types">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Combination of access_types</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Queries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Queries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Criteria Queries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Updates/Deletions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Updates/Deletions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Criteria Updates/Deletions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#DDL_Generation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#DDL_Generation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">DDL Generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Deployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Deployment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Deployment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EJB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EJB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:label rdf:datatype="&xsd;string">EJB</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Business_Logic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityExistsException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityExistsException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">EntityExistsException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManager -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManager">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">EntityManager</rdfs:label>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#merge()"/>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#persist()"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManagerFactory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManagerFactory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">EntityManagerFactory</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityNotFoundException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityNotFoundException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">EntityNotFoundException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityTransaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityTransaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">EntityTransaction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Entity_Graphs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Entity_Graphs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Entity Graphs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#File_Upload -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#File_Upload">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature"/>
+        <rdfs:label rdf:datatype="&xsd;string">File Upload</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GET -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GET">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">GET</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenerationType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenerationType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass"/>
+        <rdfs:label rdf:datatype="&xsd;string">GenerationType</rdfs:label>
+        <hasConstant rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenerationType.IDENTITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenerationType.IDENTITY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenerationType.IDENTITY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:label rdf:datatype="&xsd;string">GenerationType.IDENTITY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Glassfish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Glassfish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+        <rdfs:label rdf:datatype="&xsd;string">Glassfish</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#HTTP_Methods -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#HTTP_Methods">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">HTTP Methods</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GET"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2EE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2EE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+        <rdfs:label rdf:datatype="&xsd;string">J2EE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2ME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2ME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+        <rdfs:label rdf:datatype="&xsd;string">J2ME</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2SE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#J2SE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Edition"/>
+        <rdfs:label rdf:datatype="&xsd;string">J2SE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JAX-RS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JAX-RS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:label rdf:datatype="&xsd;string">JAX-RS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPA 2.0</rdfs:label>
+        <hasVersion>2.0</hasVersion>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Combination_of_access_types"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Queries"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#DDL_Generation"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Object-Relational_Mapping"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Shared_Object_Cache"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#cache"/>
+        <hasPackage rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPA 2.1</rdfs:label>
+        <hasVersion>2.1</hasVersion>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Updates/Deletions"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Entity_Graphs"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Query_Enhacements"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Schema_Generation"/>
+        <relatesToFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stored_Procedures"/>
+        <hasPackage rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_Error_Messages -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_Error_Messages">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPA Error Messages</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Bean_Validation_constraint(s)_violated"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_abstract_schema_type_is_unknown"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_state_field_path_cannot_be_resolved_to_a_valid_type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL</rdfs:label>
+        <relatesToAPI rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.0"/>
+        <relatesToAPI rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPA_2.1"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Delete"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Update"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Conditional_Expressions"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_GROUP_BY"/>
+        <relatesToTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Input_Parameters"/>
+        <relatesToTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Joins"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Value"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_ORDER_BY_Clause"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Operators"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Path_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Statement_Types"/>
+        <relatesToTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_WHERE_Clause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Aggregate_Function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Aggregate_Function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Aggregate Function</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_All_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_All_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL All Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Any_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Any_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Any Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Between_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Between_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Between Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Delete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Delete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Bulk Delete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Update -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Bulk_Update">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Bulk Update</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Collection_Member_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Collection_Member_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Collection Member Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Conditional_Expressions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Conditional_Expressions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Conditional Expressions</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_All_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Any_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Between_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Collection_Member_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Empty_Collection_Comparison_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Exists_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Functional_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_In_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Like_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Comparison_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Operators"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Constructor_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Constructor_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Constructor Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Delete_Statement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Delete_Statement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Delete Statement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Empty_Collection_Comparison_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Empty_Collection_Comparison_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Empty Collection Comparison Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Exists_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Exists_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Exists Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Fetch_Joins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Fetch_Joins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Fetch Joins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Functional_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Functional_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Functional Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_GROUP_BY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_GROUP_BY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL GROUP BY</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_HAVING"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_HAVING -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_HAVING">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL HAVING</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_In_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_In_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL In Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Inner_Joins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Inner_Joins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Inner Joins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Input_Parameters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Input_Parameters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Input Parameters</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Named_Parameters"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Positional_Parameters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Joins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Joins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Joins</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Fetch_Joins"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Inner_Joins"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Outer_Joins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Like_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Like_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Like Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Named_Parameters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Named_Parameters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Named Parameters</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Comparison_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Comparison_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Null Comparison Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Result_Value -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Result_Value">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Null Result Value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Value -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Value">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Null Value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_ORDER_BY_Clause -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_ORDER_BY_Clause">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL ORDER BY Clause</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Operators -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Operators">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Operators</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Outer_Joins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Outer_Joins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Outer Joins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Path_Expression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Path_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Path Expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Positional_Parameters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Positional_Parameters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Positional Parameter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Query_Enhacements -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Query_Enhacements">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Query Enhacements</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Result_Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Result_Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Result Type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_SELECT_Clause -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_SELECT_Clause">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL SELECT Clause</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Aggregate_Function"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Constructor_Expression"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Null_Result_Value"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Result_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Select_Statement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Select_Statement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Select Statement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Statement_Types -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Statement_Types">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Statement Types</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Delete_Statement"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Select_Statement"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Update_Statement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Subquery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Subquery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Subquery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Update_Statement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Update_Statement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL Update Statement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_WHERE_Clause -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_WHERE_Clause">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">JPQL WHERE Clause</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#JPQL_Conditional_Expressions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Java_2_Platform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Java_2_Platform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Platform"/>
+        <rdfs:label rdf:datatype="&xsd;string">Java 2 Platform</rdfs:label>
+        <hasVersion>2.0</hasVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Key_Sensity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Key_Sensity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Key Sensity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#LockTimeoutException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#LockTimeoutException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">LockTimeoutException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Many-To-One_Relationship -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Many-To-One_Relationship">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Many-To-One Relationship</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#MediaType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#MediaType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass"/>
+        <rdfs:label rdf:datatype="&xsd;string">MediaType</rdfs:label>
+        <hasConstant rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#MediaType.MULTIPART_FORM_DATA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#MediaType.MULTIPART_FORM_DATA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#MediaType.MULTIPART_FORM_DATA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:label rdf:datatype="&xsd;string">MediaType.MULTIPART_FORM_DATA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Multiple_Datasources -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Multiple_Datasources">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Multiple Datasources</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NoResultException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NoResultException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">NoResultException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NonUniqueResultException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NonUniqueResultException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">NonUniqueResultException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Object">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdfs:label rdf:datatype="&xsd;string">Object</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Object-Relational_Mapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Object-Relational_Mapping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">ORM</rdfs:label>
+        <relatesToSubFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Combination_of_access_types"/>
+        <relatesToSubFeature rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Many-To-One_Relationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">POST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">Parameter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Persistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Persistence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Persistence</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Key_Sensity"/>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Multiple_Datasources"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL"/>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Transactions"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#catalog"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#schema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PersistenceException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PersistenceException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">PersistenceException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">PostgreSQL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">Query</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#REST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#REST">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#API"/>
+        <rdfs:label rdf:datatype="&xsd;string">REST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#REST_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#REST_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
+        <rdfs:label rdf:datatype="&xsd;string">REST Web Services</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#HTTP_Methods"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateful_Web_Services"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateless_Web_Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RollbackException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RollbackException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">RollbackException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Schema_Generation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Schema_Generation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Schema Generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Serializable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Serializable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">Serializable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Shared_Object_Cache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Shared_Object_Cache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Shared Object Cache</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateful_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateful_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Stateful Web Services</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateless_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stateless_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Stateless Web Services</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#StoredProcedureQuery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#StoredProcedureQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">StoredProcedureQuery</rdfs:label>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#registerStoredProcedureParameter()"/>
+        <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#setParameter()"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stored_Procedures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Stored_Procedures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
+        <rdfs:label rdf:datatype="&xsd;string">Stored Procedures</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_abstract_schema_type_is_unknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_abstract_schema_type_is_unknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">The abstract schema type is unknown</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_state_field_path_cannot_be_resolved_to_a_valid_type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#The_state_field_path_cannot_be_resolved_to_a_valid_type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">The state field path cannot be resolved to a valid type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionAttributeType -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionAttributeType">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubClass"/>
+        <rdfs:label rdf:datatype="&xsd;string">TransactionAttributeType</rdfs:label>
+        <hasConstant rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionAttributeType.NEVER"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionAttributeType.NEVER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionAttributeType.NEVER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:label rdf:datatype="&xsd;string">TransactionAttributeType.NEVER</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionRequiredException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TransactionRequiredException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">TransactionRequiredException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Transactions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Transactions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">Transactions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Tuple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Tuple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">Tuple</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TypedQuery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TypedQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">TypedQuery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Wildfly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Wildfly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ApplicationServer"/>
+        <rdfs:label rdf:datatype="&xsd;string">Wildfly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#XADataSource -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#XADataSource">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
+        <rdfs:label rdf:datatype="&xsd;string">XADataSource</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#cache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#cache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Feature"/>
+        <rdfs:label rdf:datatype="&xsd;string">cache</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#catalog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#catalog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">catalog</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+        <rdfs:label rdf:datatype="&xsd;string">createEntityManagerFactory()</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory(String,_Map) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory(String,_Map)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+        <rdfs:label rdf:datatype="&xsd;string">createEntityManagerFactory(string,Map)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#generateSchema(String,Map) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#generateSchema(String,Map)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+        <rdfs:label rdf:datatype="&xsd;string">generateSchema(String,Map)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#getPersistenceUtil() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#getPersistenceUtil()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Method"/>
+        <rdfs:label rdf:datatype="&xsd;string">getPersistenceUtil()</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Class"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+        <rdfs:label rdf:datatype="&xsd;string">javax.persistence</rdfs:label>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityExistsException"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManager"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityManagerFactory"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityNotFoundException"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityTransaction"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#LockTimeoutException"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NonUniqueResultException"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PersistenceException"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Query"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RollbackException"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#StoredProcedureQuery"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Tuple"/>
+        <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#TypedQuery"/>
+        <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory()"/>
+        <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#createEntityManagerFactory(String,_Map)"/>
+        <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#generateSchema(String,Map)"/>
+        <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#getPersistenceUtil()"/>
+        <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#merge() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#merge()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod"/>
+        <rdfs:label rdf:datatype="&xsd;string">merge()</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#persist() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#persist()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod"/>
+        <rdfs:label rdf:datatype="&xsd;string">persist()</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#registerStoredProcedureParameter() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#registerStoredProcedureParameter()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod"/>
+        <rdfs:label rdf:datatype="&xsd;string">registerStoredProcedureParameter()</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#schema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#schema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label rdf:datatype="&xsd;string">schema</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#setParameter() -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#setParameter()">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GenericMethod"/>
+        <rdfs:label rdf:datatype="&xsd;string">setParameter()</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

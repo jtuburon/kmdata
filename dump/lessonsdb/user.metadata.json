@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "lessonsdb.user" }, { "v" : 1, "unique" : true, "key" : { "username" : 1 }, "name" : "username_1", "ns" : "lessonsdb.user", "background" : false, "sparse" : true, "dropDups" : false }, { "v" : 1, "key" : { "_cls" : 1 }, "name" : "_cls_1", "ns" : "lessonsdb.user", "background" : false } ] }
