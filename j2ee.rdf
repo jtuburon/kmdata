@@ -636,6 +636,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintDeclarationException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintDeclarationException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">ConstraintDeclarationException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintDefinitionException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintDefinitionException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">ConstraintDefinitionException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintViolationException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ConstraintViolationException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">ConstraintViolationException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Queries -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Criteria_Queries">
@@ -784,6 +811,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GroupDefinitionException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GroupDefinitionException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">GroupDefinitionException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#HTTP_Methods -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#HTTP_Methods">
@@ -791,6 +827,15 @@
         <rdfs:label rdf:datatype="&xsd;string">HTTP Methods</rdfs:label>
         <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#GET"/>
         <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#IllegalArgumentException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#IllegalArgumentException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">IllegalArgumentException</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1369,6 +1414,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#OptimisticLockException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#OptimisticLockException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">OptimisticLockException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#POST">
@@ -1411,6 +1465,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PessimisticLockException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PessimisticLockException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">PessimisticLockException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL">
@@ -1425,6 +1488,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Query">
         <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Interface"/>
         <rdfs:label rdf:datatype="&xsd;string">Query</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#QueryTimeoutException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#QueryTimeoutException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">QueryTimeoutException</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1597,6 +1669,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#UnexpectedTypeException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#UnexpectedTypeException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">UnexpectedTypeException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ValidationException -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#ValidationException">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Exception"/>
+        <rdfs:label rdf:datatype="&xsd;string">ValidationException</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Wildfly -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Wildfly">
@@ -1669,6 +1759,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#java.lang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#java.lang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+        <rdfs:label rdf:datatype="&xsd;string">java.lang</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence">
@@ -1682,9 +1781,12 @@
         <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#EntityTransaction"/>
         <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#LockTimeoutException"/>
         <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#NonUniqueResultException"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#OptimisticLockException"/>
         <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter"/>
         <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PersistenceException"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PessimisticLockException"/>
         <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Query"/>
+        <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#QueryTimeoutException"/>
         <hasException rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#RollbackException"/>
         <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#StoredProcedureQuery"/>
         <hasInterface rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Tuple"/>
@@ -1694,6 +1796,15 @@
         <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#generateSchema(String,Map)"/>
         <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#getPersistenceUtil()"/>
         <hasClass rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.persistence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.validation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#javax.validation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Package"/>
+        <rdfs:label rdf:datatype="&xsd;string">javax.validation</rdfs:label>
     </owl:NamedIndividual>
     
 
