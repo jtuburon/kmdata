@@ -1,1 +1,1 @@
-{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "lessonsdb.lesson" }, { "v" : 1, "unique" : true, "key" : { "number" : 1 }, "name" : "number_1", "ns" : "lessonsdb.lesson", "background" : false, "sparse" : false } ] }
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"ns":"lessonsdb.lesson","name":"_id_"},{"v":1,"key":{"number":1},"unique":true,"ns":"lessonsdb.lesson","name":"number_1","background":false,"sparse":false}]}
