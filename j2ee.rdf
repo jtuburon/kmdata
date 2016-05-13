@@ -510,6 +510,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Access -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Access">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
+        <rdfs:label>@Access</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Column -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@Column">
@@ -596,6 +605,35 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#@TransactionAttribute">
         <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Annotation"/>
         <rdfs:label rdf:datatype="&xsd;string">@TransactionAttribute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AccessType.FIELD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AccessType.FIELD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:label>AccessType.FIELD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AccessType.PROPERTY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#AccessType.PROPERTY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Constant"/>
+        <rdfs:label>AccessType.PROPERTY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Access_Types -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Access_Types">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label>Access Types</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#FIELD_ACCESS"/>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PROPERTY_ACCESS"/>
     </owl:NamedIndividual>
     
 
@@ -761,6 +799,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Entity_Graphs">
         <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubFeature"/>
         <rdfs:label rdf:datatype="&xsd;string">Entity Graphs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#FIELD_ACCESS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#FIELD_ACCESS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label>Field Access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1432,6 +1479,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PROPERTY_ACCESS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PROPERTY_ACCESS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#SubTopic"/>
+        <rdfs:label>Property Access</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Parameter">
@@ -1446,6 +1502,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Persistence">
         <rdf:type rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Topic"/>
         <rdfs:label rdf:datatype="&xsd;string">Persistence</rdfs:label>
+        <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Access_Types"/>
         <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Key_Sensity"/>
         <hasGenericMethod rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#Multiple_Datasources"/>
         <relatesToSubTopic rdf:resource="http://www.semanticweb.org/teo/ontologies/2016/2/lessonsontology#PostgreSQL"/>
